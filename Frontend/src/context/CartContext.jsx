@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
   const fetchCartItems = async () => {
     if (!userId || !token) return;
     try {
-      const res = await axios.get(`http://localhost:5000/api/cart/${userId}`, {
+      const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCartItems(res.data.products || []);
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
       };
   
       const res = await axios.post(
-        "http://localhost:5000/api/cart/add",
+       `${process.env.REACT_APP_API_BASE_URL}/cart/add`,
         payload,
         {
           headers: {

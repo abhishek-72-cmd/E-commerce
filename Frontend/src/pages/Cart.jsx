@@ -10,7 +10,7 @@ const CartPage = () => {
 
   const fetchCartItems = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/cart/${userId}`);
+      const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/cart/${userId}`);
       setCartItems(res.data.products || []);
     } catch (err) {
       console.error('Failed to fetch cart:', err);
@@ -23,7 +23,7 @@ const CartPage = () => {
 
   const handleQuantityChange = async (productId, action) => {
     try {
-      await axios.put('http://localhost:5000/api/cart/updateQuantity', {
+      await axios.put(`${process.env.REACT_APP_API_BASE_URL}/cart/updateQuantity`, {
         userId,
         productId,
         action,
