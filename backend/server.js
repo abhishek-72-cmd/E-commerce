@@ -13,7 +13,8 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://e-commerce-qf0ecbxgk-abhisheks-projects-40d7562c.vercel.app',
-     'https://e-commerce-6benpq0d9-abhisheks-projects-40d7562c.vercel.app'
+    'https://e-commerce-6benpq0d9-abhisheks-projects-40d7562c.vercel.app',
+    'https://e-commerce-lilac-five-45.vercel.app'
   ],
   credentials: true
 }));
