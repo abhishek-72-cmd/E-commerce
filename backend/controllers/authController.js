@@ -6,6 +6,7 @@ const User = require('../models/userSchema');
 // REGISTER USER
 const registerUser = async (req, res) => {
     const { username, email, password } = req.body;
+    console.log("Register request body:", req.body);
   
     try {
       const userExists = await User.findOne({ email });
