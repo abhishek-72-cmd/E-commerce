@@ -20,7 +20,6 @@ const Login = () => {
 
       const { token, userId, message } = response.data;
 
-      // Store token and userId in localStorage
       localStorage.setItem('token', token);
       localStorage.setItem('userId', userId);
 
@@ -70,6 +69,19 @@ const Login = () => {
           <div className="text-center mt-3">
             <small>
               Forgot password? <a href="/forgot-password">Reset here</a>
+            </small>
+          </div>
+
+          <div className="text-center mt-2">
+            <small>
+              Don't have an account?{' '}
+              <button
+                className="btn btn-link p-0"
+                type="button"
+                onClick={() => navigate('/signup')}
+              >
+                Sign up
+              </button>
             </small>
           </div>
         </form>

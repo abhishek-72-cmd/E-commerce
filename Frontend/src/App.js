@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import { CartProvider } from './context/CartContext';
 import Checkout from './pages/Checkout';
+import ForgotPassword from './pages/ForgotPassword';
 function App() {
   return (
     <CartProvider>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/Checkout" element={<Checkout />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
       
       </Routes>
     </Router>
