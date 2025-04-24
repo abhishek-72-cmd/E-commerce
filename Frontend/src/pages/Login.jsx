@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -68,22 +70,16 @@ const Login = () => {
 
           <div className="text-center mt-3">
             <small>
-              Forgot password? <a href="/forgot-password">Reset here</a>
+              Forgot password? <Link to="/forgotpassword">Reset here</Link>
             </small>
           </div>
 
           <div className="text-center mt-2">
             <small>
-              Don't have an account?{' '}
-              <button
-                className="btn btn-link p-0"
-                type="button"
-                onClick={() => navigate('/signup')}
-              >
-                Sign up
-              </button>
+              Don't have an account? <Link to="/signup">Sign up</Link>
             </small>
           </div>
+
         </form>
       </div>
     </div>
